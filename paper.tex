@@ -3,6 +3,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{times}
 \usepackage{booktabs}
+\usepackage{xcolor}
 \usepackage{setspace}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -10,6 +11,7 @@
 \usepackage{array}
 \usepackage{amsmath}
 \usepackage{natbib}
+\usepackage{hyperref}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[T1]{fontenc}
@@ -21,59 +23,64 @@
 \begin{document}
 
 % ===================== TITLE =====================
+{\LARGE \textbf{Misalignment, Hubungan Jangka Panjang,\\[0.3cm]
+dan Volatilitas Nilai Tukar Riil\\[0.3cm]
+Rupiah--Dolar Singapura Periode 2005--2025}}\\[1.2cm]
 
-{\LARGE \textbf{Analysis of Real Exchange Rate\\ and Indonesia's Competitiveness against Singapore}}\\[1.2cm]
+{\large \textbf{Andreas Syaloom Kurniawan}$^{a}$}\\[0.1cm]
+{\small 24/552751/PEK/31194}\\[0.4cm]
+{\large \textbf{Ferdinan Adrianus Silalahi}$^{a}$}\\[0.1cm]
+{\small 24/551895/PEK/30878}\\[0.7cm]
 
-{\large \textbf{Andreas Syaloom Kurniawan}$^{a,*}$, \textbf{Ferdinan Adrianus Silalahi}$^{a}$}\\[0.4cm]
+{\small
+$^{a}$\textit{Faculty of Economics and Business, Universitas Gadjah Mada,\\
+Jalan Sosio Humaniora No.\ 1, Bulaksumur, Caturtunggal, Depok,\\
+Sleman Regency, Special Region of Yogyakarta 55281, Indonesia}\\[0.2cm]
+\textit{Email: \href{mailto:andreassyaloomkurniawan@mail.ugm.ac.id}{andreassyaloomkurniawan@mail.ugm.ac.id};
+\href{mailto:ferdinanadrianussilalahi@mail.ugm.ac.id}{ferdinanadrianussilalahi@mail.ugm.ac.id}}
+}\\[0.8cm]
 
-$^{a}$\textit{Faculty of Economics and Business, Universitas Gadjah Mada, Jalan Sosio Humaniora No. 1, Bulaksumur, Karang Malang, Caturtunggal, Depok, Sleman Regency, Special Region of Yogyakarta 55281, Indonesia}\\
-\textit{Email: andreassyaloomkurniawan@mail.ugm.ac.id; ferdinanadrianussilalahi@mail.ugm.ac.id}
-
-\vspace{0.6cm}
 \hrule
 \vspace{0.8cm}
 
-% ===================== ARTICLE INFO + ABSTRACT =====================
-
 \begin{minipage}[t]{0.28\textwidth}
-\textbf{A R T I C L E\quad I N F O}
-
-\vspace{0.3cm}
+\raggedright
+\textbf{A R T I C L E \quad I N F O}\\[0.3cm]
 \hrule
 \vspace{0.3cm}
-
-\textbf{JEL classification:}\\
+\textbf{JEL classification:}\\[0.15cm]
 F31\\
 F41\\
-O53
-
-\vspace{0.3cm}
-
-\textbf{Keywords:}\\
+O53\\[0.4cm]
+\textbf{Keywords:}\\[0.15cm]
 Real exchange rate\\
 Competitiveness\\
 Indonesia\\
 Singapore\\
 International trade
-
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.66\textwidth}
-\textbf{A B S T R A C T}
-
-\vspace{0.3cm}
+\raggedright
+\textbf{A B S T R A C T}\\[0.3cm]
 \hrule
 \vspace{0.3cm}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This study analyzes the relationship between real exchange rate movements and Indonesia's competitiveness relative to Singapore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
+Studi ini menganalisis dinamika nilai tukar riil (RER) antara Rupiah Indonesia (IDR) 
+dan Dolar Singapura (SGD) selama periode 2005--2025. Dengan menggunakan HP Filter 
+untuk mengestimasi RER ekuilibrium dan pendekatan kointegrasi Engle-Granger serta 
+Johansen untuk menguji Purchasing Power Parity (PPP), hasil penelitian menunjukkan 
+bahwa RER IDR/SGD mengalami misalignment yang bersifat siklikal dengan episode 
+undervaluation yang terkonsentrasi pada periode krisis keuangan global 2008--2009 
+dan penurunan harga komoditas 2013--2016. Uji kointegrasi mengkonfirmasi adanya 
+hubungan keseimbangan jangka panjang antar ketiga variabel, mendukung berlakunya 
+\textit{weak PPP} dalam hubungan bilateral Indonesia--Singapura. Namun demikian, 
+\textit{strict PPP} ditolak, mengindikasikan bahwa penyesuaian nilai tukar terhadap 
+diferensial inflasi bersifat parsial --- konsisten dengan adanya faktor struktural 
+seperti efek Balassa-Samuelson dan intervensi kebijakan moneter Bank Indonesia.
 \end{minipage}
 
 \vspace{0.8cm}
-\hrule
-\vspace{1cm}
 
-% ===================== MAIN TEXT =====================
 
 \section{Introduction}
 
@@ -123,16 +130,15 @@ dimana $w_i$ adalah bobot perdagangan dengan negara $i$, dan $\sum w_i = 1$.
 
 
 
-\section{Methodology}
-
-\subsection{Data}
+\section{Data}
 
 Penelitian ini menggunakan data bulanan periode 2005--2025 yang mencakup
 nilai tukar nominal USD/IDR dan SGD/IDR, Consumer Price Index (CPI)
 Indonesia, Amerika Serikat, dan Singapura, serta beberapa variabel kontrol
 seperti suku bunga, cadangan devisa, dan neraca perdagangan.
-Data diperoleh dari dataset yang diberikan dosen metodologi penelitian Dr. Bagus Santoso, S.E., M.Soc.Sc.
-
+Data diperoleh dari dataset yang diberikan dosen metodologi penelitian 
+Dr.\ Bagus Santoso, S.E., M.Soc.Sc. Source code dari penugasan ini 
+dapat dilihat pada \url{https://github.com/ansyaku/2026-Metolit_ugm/}.
 \section{Analisis}
 
 \subsection{Misalignment Analysis}
@@ -358,13 +364,14 @@ menolak hipotesis nol pada level — nilai $\tau$ seluruhnya berada di atas \tex
 value} 5\% — mengindikasikan keberadaan unit root. Setelah dilakukan \textit{first 
 differencing}, ketiga variabel menjadi stasioner secara signifikan pada taraf 1\%, dengan 
 nilai $\tau$ yang jauh melampaui \textit{critical value} ($-12.502$, $-10.613$, dan $-12.696$ 
-dibandingkan CV $-2.880$). Dengan demikian, seluruh variabel terkonfirmasi terintegrasi pada 
-orde satu, $I(1)$, sehingga syarat perlu untuk analisis kointegrasi terpenuhi.
+dibandingkan CV $-2.880$). \\
+\textcolor{blue}{Dengan demikian, seluruh variabel terkonfirmasi terintegrasi pada 
+orde satu, $I(1)$, sehingga syarat perlu untuk analisis kointegrasi terpenuhi.}
 
-\subsubsection{Hasil Engle-Granger Two-Step Cointegration Test}
-
+\subsubsection{Hasil Cointegration Test}
+\subsubsection*{Engle-Granger Two-Step}
 \paragraph{Step 1: Regresi Kointegrasi}
-
+\noindent
 Estimasi OLS pada persamaan kointegrasi menghasilkan:
 
 \begin{equation}
@@ -397,7 +404,7 @@ Estimasi OLS pada persamaan kointegrasi menghasilkan:
 \end{table}
 
 \paragraph{Step 2: Uji Stasioneritas Residual}
-
+\noindent
 Residual $\hat{u}_t$ dari persamaan kointegrasi diuji menggunakan ADF tanpa intercept 
 dan trend, sesuai prosedur \citet{Engle1987}. Hasil pengujian disajikan pada 
 Tabel~\ref{tab:eg_step2}.
@@ -421,10 +428,11 @@ Tabel~\ref{tab:eg_step2}.
 \end{table}
 
 Nilai $\tau = -4.5645$ melampaui \textit{critical value} pada taraf 1\% ($-2.580$), 
-sehingga hipotesis nol unit root pada residual ditolak secara tegas. Dengan demikian, 
-$\hat{u}_t \sim I(0)$, dan disimpulkan bahwa $\ln(\text{SGDIDR}_t)$, 
-$\ln(\text{CPI\_INO}_t)$, dan $\ln(\text{CPI\_SIN}_t)$ \textbf{terkointegrasi} — 
-terdapat hubungan keseimbangan jangka panjang di antara ketiga variabel.
+sehingga hipotesis nol unit root pada residual ditolak secara tegas.\\
+\textcolor{blue}{Dengan demikian, 
+$\hat{u}_t \sim I(0)$,  disimpulkan bahwa $\ln(\text{SGDIDR}_t)$, 
+$\ln(\text{CPI\_INO}_t)$, dan $\ln(\text{CPI\_SIN}_t)$ \textbf{terkointegrasi}, yakni  
+terdapat hubungan keseimbangan jangka panjang di antara ketiga variabel.}
 
 \paragraph{Implikasi terhadap PPP}
 
@@ -447,17 +455,143 @@ $\beta_1 = -1$ dan $\beta_2 = +1$:
 \end{table}
 
 Kedua restriksi ditolak pada taraf 1\%, mengindikasikan bahwa \textbf{PPP ketat tidak 
-berlaku} dalam periode sampel. Terdapat dua temuan utama yang perlu dicatat. Pertama, 
-$\hat{\beta}_1 = 0.8519$ — positif dan signifikan — menunjukkan bahwa kenaikan harga 
+berlaku} dalam periode sampel. Selain itu, dapat juga diketahui bahwa :
+\begin{enumerate}
+    \item $\hat{\beta}_1 = 0.8519$ — positif dan signifikan, menunjukkan bahwa kenaikan harga 
 domestik Indonesia justru \textit{berkorelasi positif} dengan depresiasi SGD/IDR, 
-berlawanan arah dengan prediksi PPP yang mensyaratkan $\beta_1 = -1$. Kedua, 
-$\hat{\beta}_2 = 0.0923$ tidak signifikan secara statistik ($p = 0.322$), 
+berlawanan arah dengan prediksi PPP yang mensyaratkan $\beta_1 = -1$.
+\item $\hat{\beta}_2 = 0.0923$ tidak signifikan secara statistik ($p = 0.322$), 
 mengindikasikan bahwa harga Singapura tidak memiliki pengaruh yang terdeteksi terhadap 
-nilai tukar nominal dalam jangka panjang. Temuan ini konsisten dengan literatur yang 
+nilai tukar nominal dalam jangka panjang. 
+\end{enumerate}
+
+
+Temuan ini konsisten dengan literatur yang 
 mendokumentasikan kegagalan PPP pada horizon jangka menengah untuk negara berkembang 
-\citep{Rogoff1996}, dan mengindikasikan adanya faktor struktural lain — seperti 
-perbedaan produktivitas (efek Balassa-Samuelson) atau rigiditas harga — yang 
+\citep{Rogoff1996}, dan mengindikasikan adanya faktor struktural lain seperti 
+perbedaan produktivitas (efek Balassa-Samuelson) atau rigiditas harga yang 
 memediasi hubungan antara diferensial inflasi dan nilai tukar.
+
+\subsubsection{Hasil Johansen Cointegration Test}
+
+Sebagai konfirmasi terhadap hasil Engle-Granger, uji kointegrasi Johansen dilakukan 
+pada sistem VAR dengan lag optimal $K = 7$ berdasarkan kriteria AIC. Pengujian 
+menggunakan dua statistik yakni \textit{trace statistic} ($\lambda_{\text{trace}}$) dan 
+\textit{maximum eigenvalue statistic} ($\lambda_{\text{max}}$), dengan spesifikasi 
+konstanta dalam hubungan kointegrasi (\textit{ecdet = "const"}).
+
+\begin{table}[H]
+    \centering
+    \caption{Johansen Cointegration Test --- Trace Statistic}
+    \label{tab:johansen_trace}
+    \begin{tabular}{lccccl}
+        \toprule
+        $H_0$ & $\lambda_{\text{trace}}$ & CV 10\% & CV 5\% & CV 1\% & Keputusan \\
+        \midrule
+        $r = 0$    & $59.71$ & $32.00$ & $34.91$ & $41.07$ & Tolak $H_0^{***}$ \\
+        $r \leq 1$ & $21.31$ & $17.85$ & $19.96$ & $24.60$ & Tolak $H_0^{**}$ \\
+        $r \leq 2$ & $4.41$  & $7.52$  & $9.24$  & $12.97$ & Gagal tolak $H_0$ \\
+        \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \small
+        \item \textit{Catatan:} $^{***}$ dan $^{**}$ menunjukkan penolakan $H_0$ pada 
+        taraf 1\% dan 5\%. Lag $K = 7$ dipilih berdasarkan kriteria AIC.
+    \end{tablenotes}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Johansen Cointegration Test --- Maximum Eigenvalue Statistic}
+    \label{tab:johansen_eigen}
+    \begin{tabular}{lccccl}
+        \toprule
+        $H_0$ & $\lambda_{\text{max}}$ & CV 10\% & CV 5\% & CV 1\% & Keputusan \\
+        \midrule
+        $r = 0$    & $38.40$ & $19.77$ & $22.00$ & $26.81$ & Tolak $H_0^{***}$ \\
+        $r \leq 1$ & $16.90$ & $13.75$ & $15.67$ & $20.20$ & Tolak $H_0^{**}$ \\
+        $r \leq 2$ & $4.41$  & $7.52$  & $9.24$  & $12.97$ & Gagal tolak $H_0$ \\
+        \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \small
+        \item \textit{Catatan:} $^{***}$ dan $^{**}$ menunjukkan penolakan $H_0$ pada 
+        taraf 1\% dan 5\%.
+    \end{tablenotes}
+\end{table}
+
+Kedua statistik uji secara konsisten mengindikasikan \textbf{rank kointegrasi $r = 2$}: 
+hipotesis $r = 0$ dan $r \leq 1$ ditolak, sementara $r \leq 2$ gagal ditolak bahkan 
+pada taraf 10\%. \\
+\textcolor{blue}{
+Dengan demikian, terdapat dua hubungan kointegrasi yang independen 
+dalam sistem, mengkonfirmasi dan memperkuat temuan Engle-Granger.}
+
+Vektor kointegrasi pertama (dinormalisasi pada $\ln(\text{SGDIDR})$) adalah:
+
+\begin{equation}
+    \ln(\text{SGDIDR}_t) - 1.2951\ln(\text{CPI\_INO}_t) + 0.2307\ln(\text{CPI\_SIN}_t) 
+    = 4.3009
+    \label{eq:coint_vec}
+\end{equation}
+
+Koefisien $\hat{\beta}_1 = -1.2951$ dan $\hat{\beta}_2 = 0.2307$ kembali menyimpang 
+dari restriksi PPP ketat ($\beta_1 = -1$, $\beta_2 = +1$), konsisten dengan temuan 
+Engle-Granger. Keberadaan dua vektor kointegrasi ($r = 2$) sendiri merupakan temuan 
+yang menarik: dalam sistem tiga variabel $I(1)$, rank kointegrasi maksimum adalah 2, 
+yang mengimplikasikan bahwa sistem hampir sepenuhnya terikat oleh hubungan ekuilibrium 
+jangka panjang dengan hanya satu \textit{common stochastic trend} yang mendorong 
+dinamika bersama ketiga variabel.
+
+\newpage
+Tabel~\ref{tab:coint_summary} merangkum hasil kedua metode kointegrasi.
+
+\begin{table}[H]
+    \centering
+    \caption{Ringkasan Hasil Uji Kointegrasi}
+    \label{tab:coint_summary}
+    \begin{tabular}{llll}
+        \toprule
+        Metode & Statistik Uji & Hasil & Kesimpulan \\
+        \midrule
+        Engle-Granger & $\tau = -4.5645$ & $< $ CV 1\% $(-2.580)$ 
+            & Terkointegrasi \\
+        Johansen Trace & $\lambda_{\text{trace}} = 59.71$ $(r=0)$ 
+            & $>$ CV 1\% $(41.07)$ & $r = 2$ \\
+        Johansen Max-$\lambda$ & $\lambda_{\text{max}} = 38.40$ $(r=0)$ 
+            & $>$ CV 1\% $(26.81)$ & $r = 2$ \\
+        \midrule
+        \multicolumn{3}{l}{\textbf{Kesimpulan keseluruhan}} 
+            & \textbf{PPP lemah berlaku} \\
+        \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \small
+        \item \textit{Catatan:} Kedua metode konsisten mengkonfirmasi adanya hubungan 
+        kointegrasi. PPP ketat ditolak berdasarkan uji restriksi koefisien; namun 
+        hubungan jangka panjang antara nilai tukar nominal dan tingkat harga bilateral 
+        terkonfirmasi, konsisten dengan PPP dalam bentuk lemah.
+    \end{tablenotes}
+\end{table}
+
+Secara keseluruhan, \textcolor{blue}{hasil uji kointegrasi dengan dua metode yang saling melengkapi 
+(Engle-Granger dan Johansen) secara konsisten mengkonfirmasi adanya hubungan 
+keseimbangan jangka panjang antara nilai tukar nominal SGD/IDR, tingkat harga 
+domestik Indonesia, dan tingkat harga Singapura}. 
+\begin{itemize}
+    \item Temuan ini \textbf{mendukung berlakunya 
+\textit{weak PPP}} dalam hubungan bilateral Indonesia-Singapura: ketiga variabel 
+terikat oleh mekanisme ekuilibrium jangka panjang yang mencegah penyimpangan 
+permanen, sebagaimana dibuktikan oleh stasioneritas residual kointegrasi 
+($\tau = -4.5645$, signifikan pada taraf 1\%) dan rank kointegrasi $r = 2$ pada 
+uji Johansen. 
+\item Namun demikian, \textbf{\textit{strict PPP} ditolak secara tegas}, hal ini terlihat dari koefisien 
+yang diestimasi ($\hat{\beta}_1 = 0.8519$, $\hat{\beta}_2 = 0.0923$) menyimpang 
+signifikan dari restriksi teoritis $\beta_1 = -1$ dan $\beta_2 = +1$ yang 
+mengindikasikan bahwa penyesuaian nilai tukar terhadap diferensial inflasi bilateral 
+bersifat parsial dan tidak proporsional.
+\end{itemize}
+ 
 
 
 \newpage
